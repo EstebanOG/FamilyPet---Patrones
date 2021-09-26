@@ -3,8 +3,8 @@
 <project name="1.1 api" default="Crear" >
     <description> Genera el jar del api </description>
 	<!-- variables -->
-	<property name="base_api" location="C:\Users\sebas\AppData\Roaming\Code\User\workspaceStorage\dca280267758d90410da8fbc8f7d8b95\redhat.java\jdt_ws\api_ff58a91\bin"/>	
-	<property name="destino_api" location="C:\Users\sebas\udistri\noven\Patrones\Patrones\componentes\componentes\family\Orquestador\api\api.jar"/>
+	<property name="base_api" location="C:\Users\Usuario\AppData\Roaming\Code\User\workspaceStorage\7f81887e07e278291fccc68cf7275895\redhat.java\jdt_ws\api_dbecba0c\bin"/>	
+	<property name="destino_api" location="C:\Users\Usuario\Desktop\FamilyPet-Patrones\Orquestador\api\api.jar"/>
 	<!--   apiar   -->
     <target name="Crear" description="crea el api.jar">
     	 <jar destfile="${destino_api}"  basedir= "${base_api}"/>    	 

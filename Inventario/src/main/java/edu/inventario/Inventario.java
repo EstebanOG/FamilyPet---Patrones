@@ -3,10 +3,14 @@ package edu.inventario;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
-public class Inventario {
+import edu.cableado.Inventariable;
 
-	public static void main(String[] args) {
-		SpringApplication.run(Inventario.class, args);
+@SpringBootApplication
+public class Inventario implements Inventariable{
+
+
+	@Override
+	public void SubirApiInventario() {
+		SpringApplication.run(Inventario.class);
 	}
 }
