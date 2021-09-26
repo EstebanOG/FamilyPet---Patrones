@@ -1,0 +1,72 @@
+create database FAMILYPET;
+create database FAMILYPET;
+
+use FAMILYPET;
+
+create table PRODUCTO(
+	K_ID BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    
+	N_NOMBRE VARCHAR(20) NOT NULL,
+	Q_PRECIO FLOAT(11,2) NOT NULL,
+	N_DESCRIPCION VARCHAR(300) NOT NULL, 
+	N_CATEGORIA BIGINT NOT NULL
+);
+
+
+
+create table CLIENTE(
+	K_CEDULA_C BIGINT NOT NULL,
+    N_NOMBRE VARCHAR(20) NOT NULL,
+	N_DIRECCION VARCHAR(30) NOT NULL
+);
+
+
+ALTER TABLE  CLIENTE 
+ ADD CONSTRAINT PK_CLIENTE
+	PRIMARY KEY (K_CEDULA_C) 
+
+;
+
+create table COMPRA(
+	K_ID BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	Q_CEDULA BIGINT NOT NULL,
+	N_FECHA_COM DATE NOT NULL,
+    K_PRODUCTO BIGINT NOT NuLL,
+    N_FECHA_DE_ENTREGA VARCHAR(20) NOT NULL,
+	Q_TOTAL_COM float(11,2) NOT NULL
+);
+
+
+create table COMPRAPRODUCTO(
+	K_ID_PRODUCTO_CP BIGINT NOT NULL,
+	K_ID_COMPRA_CP BIGINT NOT NULL,
+	Q_TOTAL_PRODUCTO BIGINT NOT NULL
+);
+
+
+
+
+alter table COMPRAPRODUCTO add foreign key (K_ID_PRODUCTO_CP) references PRODUCTO(K_ID);
+alter table COMPRAPRODUCTO add foreign key (K_ID_COMPRA_CP) references COMPRA(K_ID);
+
+alter table COMPRA add foreign key (Q_CEDULA) references CLIENTE(K_CEDULA_C);
+
+insert into producto (N_NOMBRE,	Q_PRECIO ,	N_DESCRIPCION,N_CATEGORIA ) values('a',12,'',0);
+insert into producto (N_NOMBRE,	Q_PRECIO ,	N_DESCRIPCION,N_CATEGORIA ) values('b',12,'',0);
+insert into producto (N_NOMBRE,	Q_PRECIO ,	N_DESCRIPCION,N_CATEGORIA ) values('d',12,'',0);
+insert into producto (N_NOMBRE,	Q_PRECIO ,	N_DESCRIPCION,N_CATEGORIA ) values('e',12,'',2);
+insert into producto (N_NOMBRE,	Q_PRECIO ,	N_DESCRIPCION,N_CATEGORIA ) values('f',122,'',1);
+insert into producto (N_NOMBRE,	Q_PRECIO ,	N_DESCRIPCION,N_CATEGORIA ) values('ad',122,'',3);
+insert into producto (N_NOMBRE,	Q_PRECIO ,	N_DESCRIPCION,N_CATEGORIA ) values('aasd',132,'',4);
+insert into producto (N_NOMBRE,	Q_PRECIO ,	N_DESCRIPCION,N_CATEGORIA ) values('axcv',126,'',0);
+insert into producto (N_NOMBRE,	Q_PRECIO ,	N_DESCRIPCION,N_CATEGORIA ) values('abnm',122,'',0);
+
+insert into cliente (N_NOMBRE,K_CEDULA_C,N_DIRECCION) values('juanto rojas',3,'primera de mayo');
+
+
+insert into compra (Q_CEDULA,N_FECHA_COM,K_PRODUCTO,N_FECHA_DE_ENTREGA,Q_TOTAL_COM) values(3,CURDATE(),1,'1/12/21',1);
+insert into compra (Q_CEDULA,N_FECHA_COM,K_PRODUCTO,N_FECHA_DE_ENTREGA,Q_TOTAL_COM) values(3,CURDATE(),2,'1/12/21',1);
+insert into compra (Q_CEDULA,N_FECHA_COM,K_PRODUCTO,N_FECHA_DE_ENTREGA,Q_TOTAL_COM) values(3,CURDATE(),3,'1/12/21',1);
+insert into compra (Q_CEDULA,N_FECHA_COM,K_PRODUCTO,N_FECHA_DE_ENTREGA,Q_TOTAL_COM) values(3,CURDATE(),4,'1/12/21',1);
+insert into compra (Q_CEDULA,N_FECHA_COM,K_PRODUCTO,N_FECHA_DE_ENTREGA,Q_TOTAL_COM) values(3,CURDATE(),5,'1/12/21',1);
+
