@@ -1,4 +1,4 @@
-package com.edu.inventario.entity;
+package edu.inventario.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

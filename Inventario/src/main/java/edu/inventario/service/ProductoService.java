@@ -1,8 +1,8 @@
-package com.edu.inventario.service;
+package edu.inventario.service;
 
 import java.util.Optional;
 
-import com.edu.inventario.entity.Producto;
+import edu.inventario.entity.Producto;
 
 public interface ProductoService {
 

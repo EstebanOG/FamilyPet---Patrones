@@ -1,4 +1,4 @@
-package com.edu.inventario.service;
+package edu.inventario.service;
 
 import java.util.Optional;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.edu.inventario.dao.ProductoDAO;
-import com.edu.inventario.entity.Producto;
+import edu.inventario.dao.ProductoDAO;
+import edu.inventario.entity.Producto;
 
 @Service
 public class ProductoServiceImpl implements ProductoService {

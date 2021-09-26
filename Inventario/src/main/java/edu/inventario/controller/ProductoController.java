@@ -1,4 +1,4 @@
-package com.edu.inventario.controller;
+package edu.inventario.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.edu.inventario.entity.Producto;
-import com.edu.inventario.service.ProductoService;
+import edu.inventario.entity.Producto;
+import edu.inventario.service.ProductoService;
 
 @RestController
 @RequestMapping("/api/productos")
