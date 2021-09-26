@@ -1,4 +1,4 @@
-package com.universidad.utlidades;
+package edu.utilidades;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -12,7 +12,7 @@ import java.util.jar.JarFile;
 import java.util.jar.Manifest;
 
 public class Cargador {
-	// atributos del manifiesto
+    // atributos del manifiesto
     private final static String CLAVE_DE_COMPONENTE = "COMPONENTE";
     private final static String NOMBRE_DEL_COMPONENTE = "nombre";
     private final static String CLASE_BASE_DEL_COMPONENTE = "clase";
